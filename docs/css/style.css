@@ -179,21 +179,21 @@ body {
   color: #c74367;
 }
 
+/* اصلاح اساسی کانتینر عکس‌ها برای پشتیبانی از حالت پینترستی */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  max-width: 900px;
-  margin: 0 auto;
+  column-count: 2;        /* روی موبایل: ۲ ستون */
+  column-gap: 12px;       /* فاصله ستون‌ها روی موبایل */
+  width: 95%;             /* فاصله ملایم از لبه‌های گوشی */
+  max-width: 1000px;      /* جلوگیری از عریض شدن بیش از حد در لپ‌تاپ */
+  margin: 0 auto;         /* وسط‌چین کردن گالری */
 }
 
 .photo-card {
   background: white;
-  display: inline-block;
+  display: inline-block;  /* برای درست کار کردن چیدمان ستونی */
   width: 100%;
   margin-bottom: 12px; 
-  break-inside: avoid; 
-  background: #fff; 
+  break-inside: avoid;    /* جلوگیری از نصف شدن کارت بین ستون‌ها */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -201,8 +201,7 @@ body {
 
 .photo-card img {
   width: 100%;
-  height: auto;  
-  object-fit: cover;
+  height: auto;           /* نمایش عکس با ابعاد واقعی خودش بدون دفرمه شدن */
   display: block;
 }
 
@@ -212,13 +211,17 @@ body {
   color: #6b3c4b;
 }
 
+/* تغییر هوشمند تعداد ستون‌ها برای دستگاه‌های بزرگتر */
 @media (min-width: 768px) {
-  .gallery-container {
-    column-count: 3;     /* روی تبلت ۳ ستون */
+  .photo-grid {
+    column-count: 3;      /* روی تبلت: ۳ ستون */
+    column-gap: 16px;
   }
 }
+
 @media (min-width: 1024px) {
-  .gallery-container {
-    column-count: 4;     /* روی لپ‌تاپ ۴ ستون */
+  .photo-grid {
+    column-count: 4;      /* روی لپ‌تاپ: ۴ ستون */
+    column-gap: 20px;
   }
 }
