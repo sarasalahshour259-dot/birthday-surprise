@@ -78,24 +78,24 @@ blowBtn.addEventListener("click", () => {
 
 function renderImages() {
   const singles = [
-    { src: "images/single1.webp", caption: "عمه جونم" },
-    { src: "images/single2.webp", caption: "عمو جونم" },
-    { src: "images/single3.webp", caption: "زیباترین" },
-    { src: "images/single4.webp", caption: "خوشتیپ‌ ترین" }
+    { src: "image/single1.webp", caption: "عمه جونم" },
+    { src: "image/single2.webp", caption: "عمو جونم" },
+    { src: "image/single3.webp", caption: "زیباترین" },
+    { src: "image/single4.webp", caption: "خوشتیپ‌ ترین" }
   ];
 
   const together = [
-    { src: "images/together1.webp", caption: "❤️" },
-    { src: "images/together2.webp", caption: "❤️" },
-    { src: "images/together3.webp", caption: "خاطره به یادماندنی" },
-    { src: "images/together4.webp", caption: "بهترین روز" }
+    { src: "image/together1.webp", caption: "❤️" },
+    { src: "image/together2.webp", caption: "❤️" },
+    { src: "image/together3.webp", caption: "خاطره به یادماندنی" },
+    { src: "image/together4.webp", caption: "بهترین روز" }
   ];
 
   const family = [
-    { src: "images/family1.webp", caption: "بهترین خاطره" },
-    { src: "images/family2.webp", caption: "دو تا از بهترین های من" },
-    {src: "images/family3.webp", caption: "خاطره‌ی زیبا" },
-    { src: "images/ourfamily.webp", caption: "خانواده یعنی عشق" }
+    { src: "image/family1.webp", caption: "بهترین خاطره" },
+    { src: "image/family2.webp", caption: "دو تا از بهترین های من" },
+    {src: "image/family3.webp", caption: "خاطره‌ی زیبا" },
+    { src: "image/ourfamily.webp", caption: "خانواده یعنی عشق" }
   ];
 
   singleGrid.innerHTML = singles
