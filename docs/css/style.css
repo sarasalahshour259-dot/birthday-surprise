@@ -179,13 +179,12 @@ body {
   color: #c74367;
 }
 
-/* برگشت به کانتینر ردیفی و وسط‌چین */
 .photo-grid {
   display: flex;
-  flex-direction: column;   /* عکس‌ها زیر هم ردیف می‌شوند */
-  align-items: center;      /* دقیقاً وسط‌چین روی گوشی و لپ‌تاپ */
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
-  max-width: 600px;         /* 💡 عرض کل گالری روی لپ‌تاپ محدود شد تا عکس‌ها غول‌پیکر نشوند */
+  max-width: 600px;
   margin: 0 auto;
   padding: 10px;
 }
@@ -193,17 +192,19 @@ body {
 .photo-card {
   background: white;
   width: 100%;
-  max-width: 400px;         /* 💡 سایز کارت‌ها نه خیلی بزرگ است نه خیلی کوچک */
+  max-width: 400px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
 }
 
+
 .photo-card img {
   width: 100%;
-  height: auto;             /* نمایش قد و نیم‌قد بدون دفرمگی */
+  height: auto;
   display: block;
 }
+
 
 .caption {
   padding: 12px;
