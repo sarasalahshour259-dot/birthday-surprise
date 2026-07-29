@@ -179,51 +179,35 @@ body {
   color: #c74367;
 }
 
-/* اصلاح اساسی کانتینر عکس‌ها برای پشتیبانی از حالت پینترستی */
+/* برگشت به کانتینر ردیفی و وسط‌چین */
 .photo-grid {
-  column-count: 2;        /* روی موبایل: ۲ ستون */
-  column-gap: 12px;       /* فاصله ستون‌ها روی موبایل */
-  width: 95%;             /* فاصله ملایم از لبه‌های گوشی */
-  max-width: 1100px;      /* جلوگیری از عریض شدن بیش از حد در لپ‌تاپ */
-  margin: 0 auto;   /* وسط‌چین کردن گالری */
+  display: flex;
+  flex-direction: column;   /* عکس‌ها زیر هم ردیف می‌شوند */
+  align-items: center;      /* دقیقاً وسط‌چین روی گوشی و لپ‌تاپ */
+  gap: 20px;
+  max-width: 600px;         /* 💡 عرض کل گالری روی لپ‌تاپ محدود شد تا عکس‌ها غول‌پیکر نشوند */
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .photo-card {
-  background: rgba(255,255,255,0.65); 
-  border: 1px solid rgba(255,111,145,0.18);
-  display: inline-block;  /* برای درست کار کردن چیدمان ستونی */
+  background: white;
   width: 100%;
-  margin-bottom: 12px; 
-  break-inside: avoid;    /* جلوگیری از نصف شدن کارت بین ستون‌ها */
-  border-radius: 8px;
+  max-width: 400px;         /* 💡 سایز کارت‌ها نه خیلی بزرگ است نه خیلی کوچک */
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
 }
 
 .photo-card img {
   width: 100%;
-  height: auto;           /* نمایش عکس با ابعاد واقعی خودش بدون دفرمه شدن */
+  height: auto;             /* نمایش قد و نیم‌قد بدون دفرمگی */
   display: block;
 }
 
 .caption {
-  padding: 10px;
+  padding: 12px;
   font-size: 14px;
   color: #6b3c4b;
+  text-align: center;
 }
-
-/* تغییر هوشمند تعداد ستون‌ها برای دستگاه‌های بزرگتر */
-@media (min-width: 768px) {
-  .photo-grid {
-    column-count: 3;      /* روی تبلت: ۳ ستون */
-    column-gap: 16px;
-  }
-}
-
-@media (min-width: 1200px){
-  .photo-grid{
-    column-count: 5;
-    max-width: 1200px;
-  }
-}
-
