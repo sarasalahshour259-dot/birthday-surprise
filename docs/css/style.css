@@ -184,19 +184,20 @@ body {
   column-count: 2;        /* روی موبایل: ۲ ستون */
   column-gap: 12px;       /* فاصله ستون‌ها روی موبایل */
   width: 95%;             /* فاصله ملایم از لبه‌های گوشی */
-  max-width: 1000px;      /* جلوگیری از عریض شدن بیش از حد در لپ‌تاپ */
-  margin: 0 auto;         /* وسط‌چین کردن گالری */
+  max-width: 1100px;      /* جلوگیری از عریض شدن بیش از حد در لپ‌تاپ */
+  margin: 0 auto;   /* وسط‌چین کردن گالری */
 }
 
 .photo-card {
-  background: white;
+  background: rgba(255,255,255,0.65); 
+  border: 1px solid rgba(255,111,145,0.18);
   display: inline-block;  /* برای درست کار کردن چیدمان ستونی */
   width: 100%;
   margin-bottom: 12px; 
   break-inside: avoid;    /* جلوگیری از نصف شدن کارت بین ستون‌ها */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .photo-card img {
@@ -219,9 +220,10 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
-  .photo-grid {
-    column-count: 4;      /* روی لپ‌تاپ: ۴ ستون */
-    column-gap: 20px;
+@media (min-width: 1200px){
+  .photo-grid{
+    column-count: 5;
+    max-width: 1200px;
   }
 }
+
